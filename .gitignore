@@ -1,0 +1,2 @@
+#ignoring local .terraform folder
+.terraform/*
