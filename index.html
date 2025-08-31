@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Hera Lal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #ff416c, #ff4b2b, #fcb045);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite alternate;
+      margin-bottom: 20px;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+      to { text-shadow: 0 0 30px rgba(255,255,255,0.8), 0 0 60px rgba(255,200,150,0.8); }
+    }
+
+    img {
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255,200,150,0.8);
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      animation: sparkle 3s infinite;
+    }
+
+    @keyframes sparkle {
+      0% { transform: translate(0,0) scale(0); opacity: 0; }
+      50% { transform: translate(100px, -100px) scale(1); opacity: 1; }
+      100% { transform: translate(-50px, 50px) scale(0); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hero Hera Lal</h1>
+
+  <!-- Project Image (place your file in the root folder, e.g., project.jpg) -->
+  <img src="rock.png" alt="Project Image">
+
+  <!-- Some floating sparkles for style -->
+  <div class="sparkle" style="top:20%; left:30%;"></div>
+  <div class="sparkle" style="top:70%; left:50%; animation-delay:1s;"></div>
+  <div class="sparkle" style="top:40%; left:80%; animation-delay:2s;"></div>
+  <div class="sparkle" style="top:60%; left:10%; animation-delay:1.5s;"></div>
+</body>
+</html>
